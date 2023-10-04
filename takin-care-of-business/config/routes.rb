@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get '/blogs/new' => 'blog#new'
   get '/blogs/:id' => 'blog#show'
   post '/blogs' => 'blog#create'
-  delete '/blogs/:id' => 'blog#delete'
+  delete '/blogs/:id' => 'blog#destroy'
 end

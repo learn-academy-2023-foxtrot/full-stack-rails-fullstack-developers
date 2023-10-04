@@ -3,6 +3,8 @@
 <% @blogs.each do |blog| %>
     <h3><li> <%= blog.title %> </li></h3>
     <li> <%= blog.content %> </li>
+    <%= link_to '🗑️', '/blogs/id', method: :destroy %>
+    <%= link_to '📝', '/blogs/id', method: :update %>
     <% end %> 
     </ul>
     <p> <%= link_to 'New Post', '/blogs/new' %> </p>

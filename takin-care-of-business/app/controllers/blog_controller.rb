@@ -16,10 +16,6 @@ class BlogController < ApplicationController
             render 'new'
         end
     end
-    private
-    def blog_params
-        params.require(:blog).permit(:title, :content)
-    end
     def update
         @blog = Blog.find(params[:id])
         if @blog.update(blog_params)
@@ -32,5 +28,9 @@ class BlogController < ApplicationController
         @blog = Blog.find(params[:id])
         @blog.destroy
         redirect_to blogs_path
+    end
+    private
+    def blog_params
+        params.require(:blog).permit(:title, :content)
     end
 end
