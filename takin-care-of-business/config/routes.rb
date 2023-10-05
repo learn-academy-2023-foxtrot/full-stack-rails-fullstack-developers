@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/blogs/:id/edit' => 'blog#edit'
   patch '/blogs/:id' => 'blog#update' 
-
+  
   delete '/blogs/:id' => 'blog#destroy'
 
 end
