@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   get '/blogs' => 'blog#index'
+  
   get '/blogs/new' => 'blog#new'
-  get '/blogs/:id' => 'blog#show'
   post '/blogs' => 'blog#create'
-  delete '/blogs/:id' => 'blog#delete'
+
+  get '/blogs/:id' => 'blog#show', as: 'show_blog'
+
+  get '/blogs/:id/edit' => 'blog#edit'
+  patch '/blogs/:id' => 'blog#update' 
+  
+  delete '/blogs/:id' => 'blog#destroy'
+
 end
